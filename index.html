@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy Hackathon - Brazil SMR Placement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .map-container {
+            transition: all 0.3s ease;
+        }
+        .map-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        .map-iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .active:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fas fa-atom text-3xl mr-3"></i>
+                    <div>
+                        <h1 class="text-2xl font-bold">Brazil SMR Placement</h1>
+                        <p class="text-sm opacity-80">Hackathon Project - Nuclear Energy Initiative</p>
+                    </div>
+                </div>
+                <nav class="flex space-x-6">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#maps" class="nav-link">Maps</a>
+                    <a href="#methodology" class="nav-link">Methodology</a>
+                    <a href="#team" class="nav-link">Team</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Optimizing Small Nuclear Power Plant Placement in Brazil</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+                A 4D proposal for efficient placement and operation of Small Modular Reactors (SMRs) based on comprehensive demographic and geographic analysis.
+            </p>
+            <a href="#maps" class="bg-white text-blue-900 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition duration-300 inline-block">
+                Explore Maps <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">The Challenge</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Brazil's diverse geography and uneven population distribution present unique challenges for energy distribution. 
+                    Our project develops a multidimensional approach (4D: 3 spatial dimensions + time) to identify optimal locations 
+                    for Small Modular Reactors (SMRs) considering demographic trends, energy demand projections, and geographic constraints.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Demographic Analysis</h3>
+                        <p class="text-gray-600">Population density, growth trends, and energy consumption patterns</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <i class="fas fa-map-marked-alt text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Geographic Suitability</h3>
+                        <p class="text-gray-600">Terrain, water access, and proximity to existing infrastructure</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <i class="fas fa-bolt text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Energy Demand</h3>
+                        <p class="text-gray-600">Current and projected regional electricity requirements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maps Section -->
+    <section id="maps" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Interactive Demographic Maps</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Map 1 -->
+                <div class="map-container bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Population Density Heatmap</h3>
+                    <div class="map-iframe bg-gray-200 flex items-center justify-center">
+                        <p class="text-gray-500">[Interactive map would be embedded here]</p>
+                    </div>
+                    <p class="mt-4 text-gray-600">
+                        Visual representation of Brazil's population distribution, highlighting areas with highest concentration 
+                        that would benefit most from localized SMR deployment.
+                    </p>
+                    <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                        View Fullscreen <i class="fas fa-expand ml-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Map 2 -->
+                <div class="map-container bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Energy Demand Projections (2030)</h3>
+                    <div class="map-iframe bg-gray-200 flex items-center justify-center">
+                        <p class="text-gray-500">[Interactive map would be embedded here]</p>
+                    </div>
+                    <p class="mt-4 text-gray-600">
+                        Forecasted regional electricity needs accounting for population growth, economic development, 
+                        and industrialization trends.
+                    </p>
+                    <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                        View Fullscreen <i class="fas fa-expand ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mini Map 1 -->
+                <div class="map-container bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-semibold mb-3 text-gray-800">Water Resource Availability</h3>
+                    <div class="h-40 bg-gray-200 mb-3 flex items-center justify-center">
+                        <p class="text-gray-500">[Mini map]</p>
+                    </div>
+                    <p class="text-sm text-gray-600">Critical for reactor cooling systems and operational requirements.</p>
+                </div>
+                
+                <!-- Mini Map 2 -->
+                <div class="map-container bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-semibold mb-3 text-gray-800">Transportation Infrastructure</h3>
+                    <div class="h-40 bg-gray-200 mb-3 flex items-center justify-center">
+                        <p class="text-gray-500">[Mini map]</p>
+                    </div>
+                    <p class="text-sm text-gray-600">Road and rail networks for construction and maintenance access.</p>
+                </div>
+                
+                <!-- Mini Map 3 -->
+                <div class="map-container bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="font-semibold mb-3 text-gray-800">Seismic Risk Zones</h3>
+                    <div class="h-40 bg-gray-200 mb-3 flex items-center justify-center">
+                        <p class="text-gray-500">[Mini map]</p>
+                    </div>
+                    <p class="text-sm text-gray-600">Areas with lower geological risk for safer reactor placement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section id="methodology" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">4D Methodology</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">1. Data Collection & Processing</h3>
+                    <p class="text-gray-600">
+                        We aggregated data from IBGE (Brazilian Institute of Geography and Statistics), EPE (Energy Research Company), 
+                        and ANEEL (National Electric Energy Agency) to create comprehensive datasets covering:
+                    </p>
+                    <ul class="list-disc pl-5 mt-3 text-gray-600">
+                        <li class="mb-1">Population census data (2010-2022)</li>
+                        <li class="mb-1">Regional GDP and industrial activity</li>
+                        <li class="mb-1">Existing power infrastructure and capacity</li>
+                        <li class="mb-1">Geographic and hydrological features</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">2. Multidimensional Analysis</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                        <div class="bg-blue-50 p-4 rounded text-center">
+                            <div class="text-blue-600 font-bold text-2xl mb-2">1D</div>
+                            <p class="text-sm">Population Density</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded text-center">
+                            <div class="text-blue-600 font-bold text-2xl mb-2">2D</div>
+                            <p class="text-sm">Geographic Features</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded text-center">
+                            <div class="text-blue-600 font-bold text-2xl mb-2">3D</div>
+                            <p class="text-sm">Infrastructure Depth</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded text-center">
+                            <div class="text-blue-600 font-bold text-2xl mb-2">4D</div>
+                            <p class="text-sm">Temporal Projections</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        Our analysis combines these dimensions using weighted scoring algorithms to identify optimal locations 
+                        that meet current needs while remaining viable through 2040.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">3. Optimization Model</h3>
+                    <p class="text-gray-600">
+                        We developed a proprietary algorithm that considers:
+                    </p>
+                    <ul class="list-disc pl-5 mt-3 text-gray-600">
+                        <li class="mb-1">Minimum viable population within 50km radius</li>
+                        <li class="mb-1">Proximity to existing transmission infrastructure</li>
+                        <li class="mb-1">Water resource availability and quality</li>
+                        <li class="mb-1">Projected regional development trajectories</li>
+                        <li class="mb-1">Security and emergency response considerations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Team</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Team Member 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 overflow-hidden">
+                        <i class="fas fa-user text-6xl text-blue-500 mt-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Dr. Ana Silva</h3>
+                    <p class="text-blue-600 mb-3">Nuclear Engineer</p>
+                    <p class="text-gray-600 text-sm">
+                        Specialist in reactor design and safety protocols with 15 years experience in energy systems.
+                    </p>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 overflow-hidden">
+                        <i class="fas fa-user text-6xl text-blue-500 mt-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Carlos Mendes</h3>
+                    <p class="text-blue-600 mb-3">Data Scientist</p>
+                    <p class="text-gray-600 text-sm">
+                        Geographic data analysis expert specializing in demographic projections and spatial modeling.
+                    </p>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 overflow-hidden">
+                        <i class="fas fa-user text-6xl text-blue-500 mt-6"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Prof. Luiz Costa</h3>
+                    <p class="text-blue-600 mb-3">Energy Economist</p>
+                    <p class="text-gray-600 text-sm">
+                        Infrastructure investment analyst focusing on long-term energy policy impacts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/CTA -->
+    <section class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Interested in Our Research?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Contact us for detailed methodology, raw data, or collaboration opportunities.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Your email" class="px-4 py-3 rounded-full text-gray-800 flex-grow">
+                <button class="bg-white text-blue-900 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
+                    Contact Us <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-atom text-2xl mr-2"></i>
+                        <span class="font-bold">Brazil SMR Placement</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-1">Hackathon Project - Nuclear Energy Initiative</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-sm text-gray-400 text-center">
+                <p>© 2023 Brazil SMR Placement Team. All data visualizations for educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+        
+        // Simple animation for map containers when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {threshold: 0.1});
+        
+        document.querySelectorAll('.map-container').forEach(container => {
+            container.style.opacity = 0;
+            container.style.transform = 'translateY(20px)';
+            container.style.transition = 'all 0.6s ease';
+            observer.observe(container);
+        });
+    </script>
+</body>
+</html>
