@@ -145,19 +145,23 @@
             </div>
                 
                 <!-- Map 2 -->
-                <div class="map-container bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Energy Demand Projections (2030)</h3>
-                    <div class="map-iframe bg-gray-200 flex items-center justify-center">
-                        <p class="text-gray-500">[Interactive map would be embedded here]</p>
-                    </div>
-                    <p class="mt-4 text-gray-600">
-                        Forecasted regional electricity needs accounting for population growth, economic development, 
-                        and industrialization trends.
-                    </p>
-                    <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-                        View Fullscreen <i class="fas fa-expand ml-2"></i>
-                    </button>
-                </div>
+            <div class="map-container bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">Population Density Heatmap</h3>
+                <iframe 
+                    src="graphics/arquivo.html" 
+                    class="map-iframe w-full h-[500px] border-none rounded-lg shadow-md"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+                <p class="mt-4 text-gray-600">
+                    Visual representation of Brazil's population distribution, highlighting areas with highest concentration 
+                    that would benefit most from localized SMR deployment.
+                </p>
+                <button 
+                    onclick="document.querySelector('.map-iframe').requestFullscreen()"
+                    class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                    View Fullscreen <i class="fas fa-expand ml-2"></i>
+                </button>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
